@@ -75,7 +75,8 @@ WSGI_APPLICATION = 'django_rest_auth.wsgi.application'
 CORS_ALLOW_ALL_ORIGINS=True
 
 CSRF_TRUSTED_ORIGINS=[
-    "http://localhost:3000",#sitio permitido frontend
+    "http://localhost:3000",
+    "http://localhost:5173",#sitio permitido frontend
     "http://127.0.0.1:5173/"
 ]
 
