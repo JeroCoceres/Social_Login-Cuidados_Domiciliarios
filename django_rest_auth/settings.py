@@ -26,7 +26,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
+BASE_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -34,12 +34,31 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'rest_framework',
-    'accounts',
-    'social_accounts',
+
+
+]
+
+THIRD_APPS = [
     'corsheaders',
     'rest_framework_simplejwt.token_blacklist',
 ]
+
+MY_APPS = [
+    'rest_framework',
+    'accounts',
+    'social_accounts',
+    'Contracts',
+    'Courses',
+    'HealthInsurance',
+    'Patients',
+    'Payments',
+    'Users',  
+]
+
+
+
+
+INSTALLED_APPS = BASE_APPS + MY_APPS + THIRD_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
